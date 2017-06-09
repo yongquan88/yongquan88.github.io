@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="PM2," />
 
 
 
@@ -93,12 +93,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="永泉。">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="前段时间折腾了一下Amazon EC2 的免费服务,然后想着顺便把之前的node联系项目部署上去,我是通过ssh连接服务去启动我的服务，可是当我断开ssh连接的时候服务就关掉了，郁闷。后台经老大介绍 pm2 这个工具，顺便也体验了下pm2 cluster…. PM2介绍pm2 是一个带有负载均衡功能的node应用的进程管理器。当你要把你的独立代码利用全部的服务器上所有cpu，并保证进程永远活在，0">
+<meta name="keywords" content="PM2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PM2体验">
+<meta property="og:url" content="http://yoursite.com/2016/05/30/PM2体验/index.html">
 <meta property="og:site_name" content="永泉。">
+<meta property="og:description" content="前段时间折腾了一下Amazon EC2 的免费服务,然后想着顺便把之前的node联系项目部署上去,我是通过ssh连接服务去启动我的服务，可是当我断开ssh连接的时候服务就关掉了，郁闷。后台经老大介绍 pm2 这个工具，顺便也体验了下pm2 cluster…. PM2介绍pm2 是一个带有负载均衡功能的node应用的进程管理器。当你要把你的独立代码利用全部的服务器上所有cpu，并保证进程永远活在，0">
+<meta property="og:updated_time" content="2017-06-09T04:46:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="永泉。">
+<meta name="twitter:title" content="PM2体验">
+<meta name="twitter:description" content="前段时间折腾了一下Amazon EC2 的免费服务,然后想着顺便把之前的node联系项目部署上去,我是通过ssh连接服务去启动我的服务，可是当我断开ssh连接的时候服务就关掉了，郁闷。后台经老大介绍 pm2 这个工具，顺便也体验了下pm2 cluster…. PM2介绍pm2 是一个带有负载均衡功能的node应用的进程管理器。当你要把你的独立代码利用全部的服务器上所有cpu，并保证进程永远活在，0">
 
 
 
@@ -126,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/05/30/PM2体验/"/>
 
 
 
 
 
-  <title>永泉。</title>
+  <title>PM2体验 | 永泉。</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -158,9 +163,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -243,9 +246,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -271,9 +274,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/05/30/PM2体验/" itemprop="url">PM2体验</a></h1>
+          <h1 class="post-title" itemprop="name headline">PM2体验</h1>
         
 
         <div class="post-meta">
@@ -320,9 +321,7 @@
       
 
       
-        
-          
-            <p>前段时间折腾了一下Amazon EC2 的免费服务,然后想着顺便把之前的node联系项目部署上去,我是通过ssh连接服务去启动我的服务，可是当我断开ssh连接的时候服务就关掉了，郁闷。<br>后台经老大介绍 pm2 这个工具，顺便也体验了下pm2 cluster….</p>
+        <p>前段时间折腾了一下Amazon EC2 的免费服务,然后想着顺便把之前的node联系项目部署上去,我是通过ssh连接服务去启动我的服务，可是当我断开ssh连接的时候服务就关掉了，郁闷。<br>后台经老大介绍 pm2 这个工具，顺便也体验了下pm2 cluster….</p>
 <h3 id="PM2介绍"><a href="#PM2介绍" class="headerlink" title="PM2介绍"></a>PM2介绍</h3><p>pm2 是一个带有负载均衡功能的node应用的进程管理器。当你要把你的独立代码利用全部的服务器上所有cpu，并保证进程永远活在，0秒加载，pm2是完美的。</p>
 <h4 id="主要特性"><a href="#主要特性" class="headerlink" title="主要特性:"></a>主要特性:</h4><ul>
 <li>内建负载均衡(使用Node cluster 集群模块)</li>
@@ -349,282 +348,72 @@
 </ul>
 <p>更多更详细的内容请到官网 <a href="http://pm2.keymetrics.io/docs/usage/quick-start/" target="_blank" rel="external">PM2</a></p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/05/18/article-title/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="永泉。">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="永泉。">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/05/18/article-title/" itemprop="url">my first bog</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-05-18T17:59:55+08:00">
-                2016-05-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/PM2/" rel="tag"># PM2</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="搭建hexo遇到的一些坑"><a href="#搭建hexo遇到的一些坑" class="headerlink" title="搭建hexo遇到的一些坑"></a>搭建hexo遇到的一些坑</h2><p>   我的第一篇blog,只想写下搭建hexo博客遇到的一些坑<br>总的来说，搭建一个hexo博客对程序员来说是一件不难的事情，特别是有git和github经验的。但有些地方有疏忽的话也很容易出问题。一下是我搭建过程中遇到的几个坑：</p>
-<ul>
-<li><p>配置文件(_config.yml)的格式问题<br>  与常用的json格式不一样，这里的配置文件在冒号后面需要空一个格！！</p>
-</li>
-<li><p>repository的命名格式问题<br>  repository的名字必须是username.github.io,其中username就是必须是你的github的用户名,其它的不行。关于github pages 的更多内容可用看这里 <a href="https://pages.github.com/" target="_blank" rel="external">github pages</a></p>
-</li>
-</ul>
-<hr>
-<p>嗯…第一次用md,还不是很熟练，就不引入截图了….哈哈哈（我讲的这些貌似很难看的明白啊）</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/05/17/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="永泉。">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="永泉。">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/05/17/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-05-17T16:19:55+08:00">
-                2016-05-17
-              </time>
+              <a href="/2016/05/18/article-title/" rel="next" title="my first bog">
+                <i class="fa fa-chevron-left"></i> my first bog
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -632,6 +421,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -651,8 +444,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.png"
@@ -705,6 +507,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#PM2介绍"><span class="nav-number">1.</span> <span class="nav-text">PM2介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#主要特性"><span class="nav-number">1.1.</span> <span class="nav-text">主要特性:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PM2安装"><span class="nav-number">2.</span> <span class="nav-text">PM2安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PM2的使用"><span class="nav-number">3.</span> <span class="nav-text">PM2的使用</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -825,10 +643,10 @@
 
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-  
+
 
   
 
